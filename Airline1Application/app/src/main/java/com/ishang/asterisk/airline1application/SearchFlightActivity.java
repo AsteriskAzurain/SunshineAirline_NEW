@@ -146,7 +146,6 @@ public class SearchFlightActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin_from.setAdapter(adapter);
         spin_to.setAdapter(adapter);
-        spin_cabin.setSelection(2,true);
 
         // TODO: 5/25/2020 14 how to listen the spinner and get the selected data? 
         selectaction();

@@ -85,7 +85,7 @@ public class SearchResultActivity extends AppCompatActivity {
                             final String deptime = obj.getString("DepartureTime");
                             String arrtime = obj.getString("ArriveTime");
                             final String aircraft = obj.getString("Aircraft");
-                            int avltkts=obj.getInt("AvailableTickets");
+                            final int avltkts=obj.getInt("AvailableTickets");
 
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             Date depdate = sdf.parse(deptime);
@@ -124,6 +124,7 @@ public class SearchResultActivity extends AppCompatActivity {
                                         intent.putExtra("fltnum",fltnum);
                                         intent.putExtra("deptime",deptime);
                                         intent.putExtra("aircraft",aircraft);
+                                        intent.putExtra("avltkt",avltkts);
                                         startActivity(intent);
                                     }
                                 });

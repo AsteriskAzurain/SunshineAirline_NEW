@@ -86,37 +86,270 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:text="Departure Time:"
-        android:layout_width="wrap_content"
+    <Button
+        android:text="Submit"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/textView16"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_marginStart="21dp"
-        android:layout_below="@+id/textView13"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/btn_submit"
+        android:layout_above="@+id/btn_back_seat"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Back"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn_back_seat"
-        android:layout_above="@+id/btn_submit"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Submit"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_submit"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btn_back_seat" />
+        android:layout_alignStart="@+id/btn_submit" />
+
+    <TextView
+        android:text="Departure Time:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginStart="22dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <GridLayout
+        android:id="@+id/gridseat"
+        android:layout_width="match_parent"
+        android:rowCount="4"
+        android:columnCount="7"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView22"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp">
+        <!-- line 1 -->
+        <TextView
+            android:text=""
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:gravity="center"/>
+        <TextView
+            android:text="A"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+        <TextView
+            android:text="C"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+        <TextView
+            android:text=""
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+        <TextView
+            android:text="J"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+        <TextView
+            android:text="L"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <!-- line 2 -->
+        <TextView
+            android:text="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/s1A"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s1C"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:text=""
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/s1J"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s1L"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:text="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <!-- line 3 -->
+        <TextView
+            android:text="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/s2A"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s2C"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:text=""
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s2J"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s2L"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"></ImageView>
+
+        <TextView
+            android:text="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:onClick="onClick"/>
+
+        <!-- line 4 -->
+        <TextView
+            android:text="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/r3c0"></TextView>
+
+        <ImageView
+            android:id="@+id/s3A"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s3C"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:text=""
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/s3J"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:id="@+id/s3L"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/chair_available"
+            android:layout_width="40dp"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:text="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/r3c7"
+            android:onClick="onClick"/>
+
+    </GridLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imgledend"
-        android:layout_above="@+id/btn_back_seat"
+        android:layout_above="@+id/btn_submit"
         android:layout_alignParentStart="true">
 
         <ImageView
@@ -179,223 +412,6 @@
             android:layout_alignStart="@+id/textView25" />
 
     </RelativeLayout>
-
-    <GridLayout
-        android:id="@+id/gridseat"
-        android:layout_width="match_parent"
-        android:rowCount="4"
-        android:columnCount="7"
-        android:layout_height="150dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true">
-        <!-- line 1 -->
-        <TextView
-            android:text=""
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:gravity="center"/>
-        <TextView
-            android:text="A"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-        <TextView
-            android:text="C"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-        <TextView
-            android:text=""
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-        <TextView
-            android:text="J"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-        <TextView
-            android:text="L"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-        <TextView
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <!-- line 2 -->
-        <TextView
-            android:text="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <ImageView
-            android:id="@+id/s1A"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <ImageView
-            android:id="@+id/s1C"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <TextView
-            android:text=""
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <ImageView
-            android:id="@+id/s1J"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <ImageView
-            android:id="@+id/s1L"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <TextView
-            android:text="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <!-- line 3 -->
-        <TextView
-            android:text="2"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <ImageView
-            android:id="@+id/s2A"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <ImageView
-            android:id="@+id/s2C"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <TextView
-            android:text=""
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <ImageView
-            android:id="@+id/s2J"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <ImageView
-            android:id="@+id/s2L"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <TextView
-            android:text="2"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <!-- line 4 -->
-        <TextView
-            android:text="3"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:id="@+id/r3c0"></TextView>
-
-        <ImageView
-            android:id="@+id/s3A"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <ImageView
-            android:id="@+id/s3C"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <TextView
-            android:text=""
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"/>
-
-        <ImageView
-            android:id="@+id/s3J"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <ImageView
-            android:id="@+id/s3L"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/chair_available"
-            android:layout_width="40dp" />
-
-        <TextView
-            android:text="3"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:id="@+id/r3c7" />
-
-    </GridLayout>
 
 
 </RelativeLayout>
