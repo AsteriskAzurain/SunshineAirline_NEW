@@ -84,7 +84,7 @@ public class SelectSeatActivity extends AppCompatActivity {
                 for (ImageView img : chosenlist){
                     final String row = img.getTag(R.id.tag_row).toString();
                     final String col = img.getTag(R.id.tag_col).toString();
-                    // TODO: 5/26/2020 22 android.os.NetworkOnMainThreadException: should use a thread to connect the internet 
+                    // TODO: 5/26/2020 22 android.os.NetworkOnMainThreadException: should use a thread to connect the internet
                     new Thread(){
                         @Override
                         public void run() {

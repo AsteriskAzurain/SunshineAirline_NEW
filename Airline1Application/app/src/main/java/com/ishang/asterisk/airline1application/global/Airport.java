@@ -30,7 +30,7 @@ public class Airport {
         Name = name;
     }
 
-    // TODO: 5/25/2020 13 ovverride tostring: adapter will use this function to show items
+    // TODO: 5/25/2020 13 override tostring: adapter will use this function to show items
     @Override
     public String toString() {
         return getName();
