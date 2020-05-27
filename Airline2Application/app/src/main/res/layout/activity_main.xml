@@ -11,7 +11,55 @@
     tools:context="com.ishang.asterisk.airline2application.MainActivity">
 
     <TextView
+        android:text="Main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <Button
+        android:text="My Mileage Points"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_mile"
+        android:layout_below="@+id/btn_search"
+        android:layout_alignStart="@+id/btn_search"
+        android:onClick="onClick"/>/>
+
+    <Button
+        android:text="Logout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_mile"
+        android:layout_alignStart="@+id/btn_mile"
+        android:id="@+id/btn_logout"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_sponsor"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Search Flights"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_search"
+        android:layout_below="@+id/videoView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:onClick="onClick"/>
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="26dp"
+        android:id="@+id/videoView"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

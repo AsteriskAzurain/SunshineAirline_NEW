@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Airline2Application</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string-array name="cabintype">
+        <item>Economic</item>
+        <item>Business</item>
+        <item>First</item>
+    </string-array>
 </resources>

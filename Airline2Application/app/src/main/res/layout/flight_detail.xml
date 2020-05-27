@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/border">
+
+    <TextView
+        android:text="Airline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="27dp"
+        android:id="@+id/tv_airline_d"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/blackline"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/tv_airline_d"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"></View>
+
+    <TextView
+        android:text="Cabin Type:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView18"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:text="Aircraft:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView19"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:text="Time:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView19"
+        android:layout_alignStart="@+id/textView19"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView20"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:text="Prices:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView17"
+        android:layout_below="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:text="tv_fltnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_fltnum"
+        android:layout_alignBaseline="@+id/textView15"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_toEndOf="@+id/textView15"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:text="tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_price"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_toEndOf="@+id/textView17"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:text="tv_cabin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_cabin"
+        android:layout_alignBaseline="@+id/textView18"
+        android:layout_alignBottom="@+id/textView18"
+        android:layout_toEndOf="@+id/textView18"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:text="tv_aircraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_aircraft"
+        android:layout_alignBaseline="@+id/textView19"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_toEndOf="@+id/textView19"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:text="tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_time"
+        android:layout_alignBaseline="@+id/textView20"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_toEndOf="@+id/textView20"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:text="tv_avltkt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:id="@+id/tv_avltkt_d"
+        android:layout_above="@+id/blackline"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:text="depdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:id="@+id/tv_date_d"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp"
+        android:textAlignment="textEnd"
+        android:layout_alignBottom="@+id/tv_fltnum"
+        android:layout_alignEnd="@+id/tv_avltkt_d" />
+
+    <TextView
+        android:text="Flight Number:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:layout_marginTop="31dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_below="@+id/blackline"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp" />
+
+
+</RelativeLayout>
