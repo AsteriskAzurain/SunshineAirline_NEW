@@ -84,7 +84,7 @@ public class SearchResultActivity extends AppCompatActivity {
                             double price = obj.getDouble("Price");
                             final String depstr = obj.getString("DepartureTime");
                             final String plane = obj.getString("Aircraft");
-                            int avltkt = obj.getInt("AvailableTickets");
+                            final int avltkt = obj.getInt("AvailableTickets");
 
                             SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                             SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
@@ -117,6 +117,7 @@ public class SearchResultActivity extends AppCompatActivity {
                                                 intent.putExtra("deptime",depstr);
                                                 intent.putExtra("fltnum",fltnum);
                                                 intent.putExtra("plane",plane);
+                                                intent.putExtra("avltkt",avltkt);
                                                 startActivity(intent);
                                             }
                                         });

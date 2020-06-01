@@ -36,6 +36,7 @@ public class MileageActivity extends AppCompatActivity {
 
         tv_hi = (TextView) findViewById(R.id.tv_hi);
         tv_hi.setText("Hi, "+GlobalVariable.getUsername()+", Your total mileage points is");
+        btn_back= (Button) findViewById(R.id.btn_back_m);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

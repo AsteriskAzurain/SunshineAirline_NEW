@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13DD961C-9E40-4070-A6E2-77DDAB24CD32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministratorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorMenu.Designer.cs">
+      <DependentUpon>AdministratorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_adduser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_adduser.Designer.cs">
+      <DependentUpon>admin_adduser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_ticketsalesdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_ticketsalesdetail.Designer.cs">
+      <DependentUpon>admin_ticketsalesdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_ticketstatisics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_ticketstatisics.Designer.cs">
+      <DependentUpon>admin_ticketstatisics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_usermanagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_usermanagement.Designer.cs">
+      <DependentUpon>admin_usermanagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global\FlightInfo.cs" />
+    <Compile Include="Global\GlobalVariable.cs" />
+    <Compile Include="Usercontrol\ticketlabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\ticketlabel.Designer.cs">
+      <DependentUpon>ticketlabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\food.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\food.Designer.cs">
+      <DependentUpon>food.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\OfficeUser.cs" />
+    <Compile Include="Global\SqlHelper.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeUserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficeUserMenu.Designer.cs">
+      <DependentUpon>OfficeUserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_flightScheduleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_flightScheduleManagement.Designer.cs">
+      <DependentUpon>admin_flightScheduleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ouser_flightStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ouser_flightStatus.Designer.cs">
+      <DependentUpon>ouser_flightStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ouser_foodService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ouser_foodService.Designer.cs">
+      <DependentUpon>ouser_foodService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ouser_searchflights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ouser_searchflights.Designer.cs">
+      <DependentUpon>ouser_searchflights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="testDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\flightNonStop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\flightNonStop.Designer.cs">
+      <DependentUpon>flightNonStop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\flightStop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\flightStop.Designer.cs">
+      <DependentUpon>flightStop.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdministratorMenu.resx">
+      <DependentUpon>AdministratorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_adduser.resx">
+      <DependentUpon>admin_adduser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_ticketsalesdetail.resx">
+      <DependentUpon>admin_ticketsalesdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_ticketstatisics.resx">
+      <DependentUpon>admin_ticketstatisics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_usermanagement.resx">
+      <DependentUpon>admin_usermanagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\ticketlabel.resx">
+      <DependentUpon>ticketlabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\food.resx">
+      <DependentUpon>food.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeUserMenu.resx">
+      <DependentUpon>OfficeUserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_flightScheduleManagement.resx">
+      <DependentUpon>admin_flightScheduleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ouser_flightStatus.resx">
+      <DependentUpon>ouser_flightStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ouser_foodService.resx">
+      <DependentUpon>ouser_foodService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ouser_searchflights.resx">
+      <DependentUpon>ouser_searchflights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Usercontrol\flightNonStop.resx">
+      <DependentUpon>flightNonStop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\flightStop.resx">
+      <DependentUpon>flightStop.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ouser_flightStatus.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="testDataSet.xsc">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testDataSet.xss">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="foodpic\B01.jpg" />
+    <Content Include="foodpic\B02.jpg" />
+    <Content Include="foodpic\C01.jpg" />
+    <Content Include="foodpic\C02.jpg" />
+    <Content Include="foodpic\C03.jpg" />
+    <Content Include="foodpic\D01.jpg" />
+    <Content Include="foodpic\D02.jpg" />
+    <Content Include="foodpic\N01.jpg" />
+    <Content Include="foodpic\N02.jpg" />
+    <Content Include="foodpic\P01.jpg" />
+    <Content Include="foodpic\P02.jpg" />
+    <Content Include="foodpic\S01.jpg" />
+    <Content Include="foodpic\S02.jpg" />
+    <Content Include="foodpic\S03.jpg" />
+    <Content Include="foodpic\S04.jpg" />
+    <Content Include="foodpic\V01.jpg" />
+    <Content Include="foodpic\V02.jpg" />
+    <Content Include="foodpic\V03.jpg" />
+    <Content Include="img\Aircraft-Airbus  319.jpg" />
+    <Content Include="img\Aircraft-Boeing 737-800.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
