@@ -221,5 +221,10 @@ namespace WindowsFormsApplication1
             this.Hide();
             this.Close();
         }
+
+        private void cbrole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

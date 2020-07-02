@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Airline</string>
+
+    <string-array name="cabin_type">
+        <item>Economy</item>
+        <item>Business</item>
+        <item>First</item>
+    </string-array>
+</resources>
