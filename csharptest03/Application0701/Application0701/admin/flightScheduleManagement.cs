@@ -60,6 +60,7 @@ namespace Application0701.admin
             dtct = SqlHelper.ExecuteDatatable(sql, null);
             sql = "select * from Airport order by IATACode";
             dtap = SqlHelper.ExecuteDatatable(sql, null);
+            radioButton1.Checked = true;
         }
     }
 }

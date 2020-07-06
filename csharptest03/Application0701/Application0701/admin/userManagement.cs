@@ -15,9 +15,8 @@ namespace Application0701.admin
     {
         List<OfficeUser> userlist = new List<OfficeUser>();
 
-        DataTable dt1 = new DataTable();
-        DataTable dt2 = new DataTable();
         DataTable userdata = new DataTable();
+        DataTable userbak = new DataTable();
         DataTable showdata = new DataTable();
         DataTable ds = new DataTable();
 
@@ -90,14 +89,17 @@ namespace Application0701.admin
 
                 showdata.Rows.Add(dr);
             }
+            userbak = showdata.Copy();
 
             loadData();
+
+            cbrole.SelectedIndex = 0;
         }
 
         private void picnext_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(currentIndex.ToString());
-            currentIndex += pagesize;
+            //currentIndex += pagesize;
             currentPage++;
             if (currentIndex >= totalIndex) currentIndex = (totalPage - 1) * pagesize;
             if (currentPage >= totalPage) currentPage = totalPage;
@@ -107,10 +109,12 @@ namespace Application0701.admin
         private void picpre_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(currentIndex.ToString());
-            currentIndex -= pagesize;
+            //currentIndex -= 2*pagesize;
             currentPage--;
-            if (currentIndex <= 0) currentIndex = 0;
             if (currentPage <= 0) currentPage = 1;
+            currentIndex = (currentPage - 1) * pagesize;
+            if (currentIndex <= 0) currentIndex = 0;
+            
             loadData();
         }
 
@@ -128,6 +132,30 @@ namespace Application0701.admin
             loadData();
         }
 
+        private void cbrole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbpage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            string email = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+            edituser frmedit = new edituser(email);
+            frmedit.Show();
+        }
+
+        private void cbpage_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            currentPage = Convert.ToInt32(cbpage.SelectedItem);
+            currentIndex = (currentPage - 1) * pagesize;
+            loadData();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             edituser frmadd = new edituser();
@@ -136,25 +164,58 @@ namespace Application0701.admin
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
+            int roleid = cbrole.SelectedIndex;
+            //string role = cbrole.Text;
+            //role = role == "All" ? "" : role;
+            string sname = txtname.Text;
+            DataTable dt = userbak.Copy();
+            string str = string.Format("Name like '%{0}%'", sname);
+            if (roleid > 0)
+            {
+                string role = cbrole.SelectedItem.ToString();
+                str += (string.Format(" and Role = '{0}'", role));
+            }
+            DataRow[] result = dt.Select(str);
+            int count= result.Length;
+            lbltotalrecord.Text = count.ToString();
+            if (count > 0)
+            {
+                currentIndex = 0; currentPage = 1;
+                totalIndex = count; totalPage = (count % pagesize == 0 ? count / pagesize : count / pagesize + 1);
+                lbltotalpage.Text = totalPage.ToString();
+                cbpage.Items.Clear();
+                for(int i = 1; i <= totalPage; i++)
+                {
+                    cbpage.Items.Add(i);
+                }
 
+                showdata.Rows.Clear();
+                foreach(DataRow row in result)
+                {
+                    showdata.ImportRow(row);
+                }
+                loadData();
+            }          
+                        
         }
 
         public void loadData()
         {
             //cbpage.SelectedText = (currentIndex / pagesize + 1).ToString();
-            //MessageBox.Show("c page"+currentPage.ToString());
+            //MessageBox.Show("c page" + currentPage.ToString());
             cbpage.SelectedIndex = currentPage-1;
 
             ds.Rows.Clear();
             dataGridView1.DataSource = ds;
             dataGridView1.Refresh();
-
+            int oldindex = currentIndex;
             for (int b = 0; b < pagesize; b++)
             {
                 if (currentIndex >= totalIndex) break;
                 ds.ImportRow(showdata.Rows[currentIndex]);
                 currentIndex++;
             }
+            //MessageBox.Show("index old:"+oldindex+", new:"+currentIndex);
             dataGridView1.DataSource = ds;
             dataGridView1.Refresh();
         }

@@ -126,6 +126,7 @@
             this.cbrole.Name = "cbrole";
             this.cbrole.Size = new System.Drawing.Size(110, 21);
             this.cbrole.TabIndex = 1;
+            this.cbrole.SelectedIndexChanged += new System.EventHandler(this.cbrole_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -187,6 +188,8 @@
             this.cbpage.Name = "cbpage";
             this.cbpage.Size = new System.Drawing.Size(69, 21);
             this.cbpage.TabIndex = 6;
+            this.cbpage.SelectedIndexChanged += new System.EventHandler(this.cbpage_SelectedIndexChanged);
+            this.cbpage.SelectionChangeCommitted += new System.EventHandler(this.cbpage_SelectionChangeCommitted);
             // 
             // label4
             // 
@@ -222,6 +225,7 @@
             this.btnedit.TabIndex = 10;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // lbltotalpage
             // 

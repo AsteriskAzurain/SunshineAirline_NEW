@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Session1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Session1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Application0701.Properties.Settings.GlobalReference.Default.Session1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Session1ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        s.FlightNumber, c1.CityName + '/' + r.DepartureAirportIATA AS 'From', c2.CityName + '/' + r.ArrivalAirportIATA AS 'To', s.Time AS 'ScheduleStart', DATEADD(minute, r.FlightTime, s.Time) AS 'ScheduleArrival', 
+                         fs.ActualArrivalTime AS 'ActualArrival', s.Gate, DATEDIFF(mi, DATEADD(minute, r.FlightTime, s.Time), CONVERT(time(7), fs.ActualArrivalTime, 108)) AS timediff
+FROM            FlightStatus AS fs INNER JOIN
+                         Schedule AS s ON s.ScheduleId = fs.ScheduleId INNER JOIN
+                         Route AS r ON r.RouteId = s.RouteId INNER JOIN
+                         Airport AS a1 ON a1.IATACode = r.DepartureAirportIATA INNER JOIN
+                         City AS c1 ON c1.CityCode = a1.CityCode INNER JOIN
+                         Airport AS a2 ON a2.IATACode = r.ArrivalAirportIATA INNER JOIN
+                         City AS c2 ON c2.CityCode = a2.CityCode</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FlightNumber" DataSetColumn="FlightNumber" />
+              <Mapping SourceColumn="From" DataSetColumn="From" />
+              <Mapping SourceColumn="To" DataSetColumn="To" />
+              <Mapping SourceColumn="ScheduleStart" DataSetColumn="ScheduleStart" />
+              <Mapping SourceColumn="ScheduleArrival" DataSetColumn="ScheduleArrival" />
+              <Mapping SourceColumn="ActualArrival" DataSetColumn="ActualArrival" />
+              <Mapping SourceColumn="Gate" DataSetColumn="Gate" />
+              <Mapping SourceColumn="timediff" DataSetColumn="timediff" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightNumber" msprop:Generator_ColumnVarNameInTable="columnFlightNumber" msprop:Generator_ColumnPropNameInRow="FlightNumber" msprop:Generator_ColumnPropNameInTable="FlightNumberColumn" msprop:Generator_UserColumnName="FlightNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="From" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFrom" msprop:Generator_ColumnPropNameInRow="From" msprop:Generator_ColumnPropNameInTable="FromColumn" msprop:Generator_UserColumnName="From" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="To" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTo" msprop:Generator_ColumnPropNameInRow="To" msprop:Generator_ColumnPropNameInTable="ToColumn" msprop:Generator_UserColumnName="To" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScheduleStart" msprop:Generator_ColumnVarNameInTable="columnScheduleStart" msprop:Generator_ColumnPropNameInRow="ScheduleStart" msprop:Generator_ColumnPropNameInTable="ScheduleStartColumn" msprop:Generator_UserColumnName="ScheduleStart" type="xs:duration" />
+              <xs:element name="ScheduleArrival" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnScheduleArrival" msprop:Generator_ColumnPropNameInRow="ScheduleArrival" msprop:Generator_ColumnPropNameInTable="ScheduleArrivalColumn" msprop:Generator_UserColumnName="ScheduleArrival" type="xs:duration" minOccurs="0" />
+              <xs:element name="ActualArrival" msprop:Generator_ColumnVarNameInTable="columnActualArrival" msprop:Generator_ColumnPropNameInRow="ActualArrival" msprop:Generator_ColumnPropNameInTable="ActualArrivalColumn" msprop:Generator_UserColumnName="ActualArrival" type="xs:dateTime" />
+              <xs:element name="Gate" msprop:Generator_ColumnVarNameInTable="columnGate" msprop:Generator_ColumnPropNameInRow="Gate" msprop:Generator_ColumnPropNameInTable="GateColumn" msprop:Generator_UserColumnName="Gate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="timediff" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntimediff" msprop:Generator_ColumnPropNameInRow="timediff" msprop:Generator_ColumnPropNameInTable="timediffColumn" msprop:Generator_UserColumnName="timediff" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

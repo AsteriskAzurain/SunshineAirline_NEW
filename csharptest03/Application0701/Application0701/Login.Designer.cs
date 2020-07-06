@@ -135,11 +135,11 @@
             // 
             // btnautologin
             // 
-            this.btnautologin.Location = new System.Drawing.Point(468, 209);
+            this.btnautologin.Location = new System.Drawing.Point(434, 209);
             this.btnautologin.Name = "btnautologin";
-            this.btnautologin.Size = new System.Drawing.Size(86, 46);
+            this.btnautologin.Size = new System.Drawing.Size(120, 46);
             this.btnautologin.TabIndex = 9;
-            this.btnautologin.Text = "Auto login... Cancel";
+            this.btnautologin.Text = "Auto login in 3s... Click to Cancel";
             this.btnautologin.UseVisualStyleBackColor = true;
             this.btnautologin.Visible = false;
             this.btnautologin.Click += new System.EventHandler(this.btnautologin_Click);

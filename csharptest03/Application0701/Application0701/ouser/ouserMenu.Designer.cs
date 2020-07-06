@@ -47,7 +47,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(856, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1355, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -90,10 +90,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 504);
+            this.ClientSize = new System.Drawing.Size(1355, 918);
             this.Controls.Add(this.menuStrip2);
             this.Name = "ouserMenu";
-            this.Text = "ouserMenu";
+            this.Text = "Office User Menu";
             this.Load += new System.EventHandler(this.ouserMenu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
