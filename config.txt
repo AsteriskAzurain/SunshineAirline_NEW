@@ -1,0 +1,3 @@
+metadata=res://*/DataAccess.Model1.csdl|res://*/DataAccess.Model1.ssdl|res://*/DataAccess.Model1.msl;provider=System.Data.SqlClient;provider connection string="data source=S414X169;initial catalog=Session1;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+
+    <add name="SQLConnString" connectionString="server=S414X169;Integrated Security=SSPI;database=Session1;Enlist=true;Pooling=true;Max Pool Size=9999999;Min Pool Size=0;packet size=1000" />
